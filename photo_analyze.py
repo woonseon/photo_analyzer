@@ -11,7 +11,10 @@ third_group = []
 def exif_setting(file_location):
     # open image file
     f = open(file_location, 'rb')
-
+    
+    # out_dic initialize
+    out_dic.clear()
+    
     file_name = file_location.split('/')
 
     # Return exif tag
@@ -143,6 +146,7 @@ if __name__ == "__main__":
         if selec is '1':
             for i in sys.argv[1:]:
                 main2(i)
+            print "Made output.csv!!!"
         elif selec is '2':
             for n in sys.argv[1:]:
                 main(n)
@@ -150,11 +154,11 @@ if __name__ == "__main__":
         elif selec is '3':
             for n in sys.argv[1:]:
                 main(n)
-            print "first_group: ",
+            print "Date Error Group: ",
             print first_group
-            print "second_group: ",
+            print "Size Error Group: ",
             print second_group
-            print "third_group: ",
+            print "Integrity Group: ",
             print third_group
             print ""
         else:
