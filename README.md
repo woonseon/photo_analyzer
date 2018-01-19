@@ -8,3 +8,4 @@ Requirements
 
 Usage
     
+    Put "python photo_analyze.py <Image location>"
