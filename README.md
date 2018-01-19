@@ -2,6 +2,9 @@
 
 Requirements
   
-  pip install exifread
-  
-  pip install PILLOW
+    pip install exifread  
+    pip install PILLOW
+
+
+Usage
+    
