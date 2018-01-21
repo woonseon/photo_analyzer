@@ -162,20 +162,21 @@ if __name__ == "__main__":
         elif selec is '3':
             for n in sys.argv[1:]:
                 main3(n)
-            print "===== Date Error Group: ",
-	    for i in range(len(first_group)):
-		print first_group[i] + " ",
-	    print "====="
+            print "\n==========================================================================================================="
+            print "Date Error Group: ",
+            for i in range(len(first_group)):
+                print first_group[i] + " ",
+            print "\n==========================================================================================================="
 
-            print "===== Size Error Group: ",
-	    for j in range(len(second_group)):
+            print "Size Error Group: ",
+            for j in range(len(second_group)):
                 print second_group[j] + " ",
-	    print "====="
+            print "\n==========================================================================================================="
 
-            print "===== Integrity Group: ",
-	    for k in range(len(third_group)):
+            print "Integrity Group: ",
+            for k in range(len(third_group)):
                 print third_group[k] + " ",
-            print "=====\n"
+            print "\n===========================================================================================================\n"
             
             # group init
             first_group = []
