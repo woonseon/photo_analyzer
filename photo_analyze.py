@@ -6,6 +6,7 @@ import csv
 from PIL import Image
 
 out_dic = {}
+file_N = {}
 first_group = []
 second_group = []
 third_group = []
@@ -27,12 +28,15 @@ def exif_setting(file_location):
             #make dictionary
             out_dic[str(tag)] = str(tags[tag])
     out_dic['file_name'] = file_name[-1]
+    file_N['file_name'] = file_name[-1]
 
 def exif_read(file_location):
     exif_setting(file_location)
+    del out_dic['file_name']
 
     with open("./output.csv", 'ab') as resultFile:
         wr = csv.writer(resultFile, dialect='excel')
+        resultFile.write("%s\n" % file_N['file_name'])
         wr.writerow(list(out_dic.keys()))
         wr.writerow(list(out_dic.values()))
         wr.writerow("")
