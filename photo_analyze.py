@@ -131,10 +131,13 @@ def select_menu():
 
 def main(file_location):
     exif_setting(file_location)
-    grouping(file_location)
 
 def main2(file_location):
     exif_read(file_location)
+
+def main3(file_location):
+    exif_setting(file_location)
+    grouping(file_location)
 
 if __name__ == "__main__":
     if len(sys.argv) < 2:
@@ -153,7 +156,7 @@ if __name__ == "__main__":
                 extract()
         elif selec is '3':
             for n in sys.argv[1:]:
-                main(n)
+                main3(n)
             print "Date Error Group: ",
             print first_group
             print "Size Error Group: ",
@@ -161,6 +164,11 @@ if __name__ == "__main__":
             print "Integrity Group: ",
             print third_group
             print ""
+            
+            # group init
+            first_group = []
+            second_group = []
+            third_group = []
         else:
             print "Bye~"
             sys.exit()
