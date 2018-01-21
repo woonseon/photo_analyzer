@@ -143,6 +143,9 @@ if __name__ == "__main__":
     if len(sys.argv) < 2:
         print "Put \"python photo_analyze.py <Image location>\""
         sys.exit(1)
+    if "jpg" not in sys.argv[1]:
+	print "Put Only jpg file"
+	sys.exit(1)
 
     while True:
         selec = select_menu()
