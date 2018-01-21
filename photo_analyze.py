@@ -1,3 +1,5 @@
+#-*-coding:utf-8-*-
+
 import exifread 
 import sys
 import csv
@@ -160,13 +162,20 @@ if __name__ == "__main__":
         elif selec is '3':
             for n in sys.argv[1:]:
                 main3(n)
-            print "Date Error Group: ",
-            print first_group
-            print "Size Error Group: ",
-            print second_group
-            print "Integrity Group: ",
-            print third_group
-            print ""
+            print "===== Date Error Group: ",
+	    for i in range(len(first_group)):
+		print first_group[i] + " ",
+	    print "====="
+
+            print "===== Size Error Group: ",
+	    for j in range(len(second_group)):
+                print second_group[j] + " ",
+	    print "====="
+
+            print "===== Integrity Group: ",
+	    for k in range(len(third_group)):
+                print third_group[k] + " ",
+            print "=====\n"
             
             # group init
             first_group = []
