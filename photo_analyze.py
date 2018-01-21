@@ -24,7 +24,7 @@ def exif_setting(file_location):
         if tag not in ('JPEGThumbnail', 'TIFFThumbnail', 'Filename', 'EXIF MakerNote'):
             #make dictionary
             out_dic[str(tag)] = str(tags[tag])
-    out_dic['file_name'] = file_name[2]
+    out_dic['file_name'] = file_name[-1]
 
 def exif_read(file_location):
     exif_setting(file_location)
@@ -143,7 +143,7 @@ if __name__ == "__main__":
     if len(sys.argv) < 2:
         print "Put \"python photo_analyze.py <Image location>\""
         sys.exit(1)
-    if "jpg" not in sys.argv[1]:
+    if ".jpg" not in sys.argv[1]:
 	print "Put Only jpg file"
 	sys.exit(1)
 
